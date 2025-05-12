@@ -4,6 +4,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   base: './',
   plugins: [react()],
+  build: {
+    outDir: 'docs'       // ← NEW: write the production build into /docs
+  },
   server: {
     proxy: {
       "/api/v1": {
